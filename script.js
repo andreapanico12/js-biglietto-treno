@@ -56,6 +56,51 @@
 // }
 
 // =======================SOLUZIONE 3================================
+// const distance = parseInt( prompt("Kilometers to travel") );
+// const passengerAge = parseInt( prompt ("Passenger age"));
+
+// console.log('Distance: ' , distance, "Km");
+// console.log( 'Age:', passengerAge );
+
+
+// const kmCost = 0.21;
+// const UrDiscount = 20;
+// const OvDiscount = 40;
+
+// if (passengerAge < 18 ) {
+//   const price = ( (distance * kmCost) - ((distance * kmCost / 100) * UrDiscount));
+//   console.log ("Ticket price:", price.toFixed(2), '€' )
+// } else if (passengerAge >= 65){
+//   const price = ((distance * kmCost)- ((distance * kmCost / 100) * OvDiscount));
+//   console.log ("Ticket price:", price.toFixed(2), '€' )
+// } else {
+//   const price = (distance * kmCost)
+//   console.log ("Ticket price:" , price.toFixed(2), '€')
+// };
+// =============================SOLUZIONE 4===========================
+// const distance = parseInt( prompt("Kilometers to travel") );
+// const passengerAge = parseInt( prompt ("Passenger age"));
+
+// console.log('Distance: ' , distance, "Km");
+// console.log( 'Age:', passengerAge );
+
+
+// const kmCost = 0.21;
+// const UrDiscount = 20;
+// const OvDiscount = 40;
+
+// const price = (distance * kmCost);
+
+// if (passengerAge < 18 ) {
+//   const price = ( (distance * kmCost) - ((distance * kmCost / 100) * UrDiscount));
+//   console.log ("Ticket price:", price.toFixed(2), '€' )
+// } else if (passengerAge >= 65){
+//   const price = ((distance * kmCost)- ((distance * kmCost / 100) * OvDiscount));
+//   console.log ("Ticket price:", price.toFixed(2), '€' )
+// } else {
+//   console.log ("Ticket price:" , price.toFixed(2), '€')
+// };
+// =========================SOLUZIONE 5==============================
 const distance = parseInt( prompt("Kilometers to travel") );
 const passengerAge = parseInt( prompt ("Passenger age"));
 
@@ -67,17 +112,15 @@ const kmCost = 0.21;
 const UrDiscount = 20;
 const OvDiscount = 40;
 
+const price = distance * kmCost;
+
 if (passengerAge < 18 ) {
-  const price = ( (distance * kmCost) - ((distance * kmCost / 100) * UrDiscount));
-  console.log ("Ticket price:", price.toFixed(2), '€' )
+  const urPrice = ( price - (price/ 100 * UrDiscount));
+  console.log ("Ticket price:", urPrice.toFixed(2), '€' )
 } else if (passengerAge >= 65){
-  const price = ((distance * kmCost)- ((distance * kmCost / 100) * OvDiscount));
-  console.log ("Ticket price:", price.toFixed(2), '€' )
+  const ovPrice = ( price - ( price / 100 * OvDiscount));
+  console.log ("Ticket price:", ovPrice.toFixed(2), '€' )
 } else {
-  const price = (distance * kmCost)
   console.log ("Ticket price:" , price.toFixed(2), '€')
 };
-
-
-
 
